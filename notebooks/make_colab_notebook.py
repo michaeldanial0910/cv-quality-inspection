@@ -213,21 +213,25 @@ class Export(nn.Module):
         return self.m.head(self.m.pool(f).flatten(1)).squeeze(1), f
 
 model.eval().cpu()
+export = Export(model).eval()     # a new nn.Module starts in train mode; export() restores that mode afterwards
 dummy = torch.from_numpy(np.stack([to_input(split["val"].file[i]) for i in range(4)]))
-torch.onnx.export(Export(model), dummy, OUT / "models/model.onnx", input_names=["image"], output_names=["logit", "features"],
+torch.onnx.export(export, dummy, OUT / "models/model.onnx", input_names=["image"], output_names=["logit", "features"],
                   dynamic_axes={"image": {0: "n"}, "logit": {0: "n"}, "features": {0: "n"}}, opset_version=17, dynamo=False)
 np.savez(OUT / "models/head.npz", w=model.head.weight.detach().numpy()[0], b=model.head.bias.detach().numpy())
 
+# Parity: ONNX on CPU vs the step-6 predictions of the trained model (GPU), on all validation images
 import onnxruntime as ort
 sess = ort.InferenceSession(str(OUT / "models/model.onnx"))
-z_onnx = sess.run(["logit"], {"image": dummy.numpy()})[0]
-with torch.no_grad(): z_torch = model(dummy).numpy()
-diff = float(np.abs(z_onnx - z_torch).max()); print("max |onnx - torch| logit:", diff); assert diff < 1e-3
+pv = pd.read_csv(OUT / "reports/predictions/finetuned.csv").query("split == 'val'").reset_index(drop=True)
+assert (split["val"].path.values == pv.path.values).all()
+x = np.stack([to_input(f) for f in split["val"].file])
+z_onnx = np.concatenate([sess.run(["logit"], {"image": x[i:i + 32]})[0] for i in range(0, len(x), 32)])
+diff = float(np.abs(z_onnx - pv.logit.values).max()); print("max |onnx - torch| logit on val:", diff); assert diff < 1e-2
 
 meta = {"backbone": "efficientnet_b0 IMAGENET1K_V1", "torch": torch.__version__, "torchvision": torchvision.__version__,
         "gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu", "manifest_sha256": MANIFEST_SHA,
         "linear_probe_C": best_C, "best_finetune_epoch": best_row["epoch"], "best_val_ap": best_row["val_ap"],
-        "onnx_torch_max_diff": diff, "epochs_run": len(log), "train_minutes": round(sum(r["sec"] for r in log) / 60, 1),
+        "onnx_vs_torch_val_max_diff": diff, "epochs_run": len(log), "train_minutes": round(sum(r["sec"] for r in log) / 60, 1),
         "onnx_mb": round(os.path.getsize(OUT / "models/model.onnx") / 1e6, 1)}
 (OUT / "models/colab_meta.json").write_text(json.dumps(meta, indent=2)); print(meta)
 """)
