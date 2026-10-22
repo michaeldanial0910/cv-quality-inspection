@@ -1,0 +1,6 @@
+{
+  "cpu_ms_per_image_median": 35.99366649996227,
+  "cpu_ms_per_image_p95": 53.44382324965409,
+  "cpu_threads": 4,
+  "onnx_mb": 16.0
+}

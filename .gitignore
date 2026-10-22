@@ -10,6 +10,7 @@ data/processed/*
 !data/**/.gitkeep
 models/*
 !models/policy.json
+!models/colab_meta.json
 !models/.gitkeep
 
 # Python / notebooks

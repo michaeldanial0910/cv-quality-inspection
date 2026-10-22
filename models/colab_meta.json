@@ -1,0 +1,14 @@
+{
+  "backbone": "efficientnet_b0 IMAGENET1K_V1",
+  "torch": "2.11.0+cu130",
+  "torchvision": "0.26.0+cu130",
+  "gpu": "Tesla T4",
+  "manifest_sha256": "8c5f47328694a174619c9b6a454b9ab22c8a37be93a7ef3cfa94164b9c9e9bbd",
+  "linear_probe_C": 1.0,
+  "best_finetune_epoch": 11,
+  "best_val_ap": 0.9975483362993554,
+  "onnx_vs_torch_val_max_diff": 0.00013122735595771928,
+  "epochs_run": 19,
+  "train_minutes": 1.6,
+  "onnx_mb": 16.0
+}

@@ -1,0 +1,20 @@
+{
+  "ood": {
+    "threshold": 0.5002233028411867,
+    "val_flagged": 0.010256410256410256,
+    "foreign_flagged": "8/8"
+  },
+  "errors": {
+    "sent to review": 14
+  },
+  "deletion_test": {
+    "n": 117,
+    "mean_logit_drop_heatmap": 3.634004096062774,
+    "mean_logit_drop_random": 1.7180024857195013,
+    "difference_ci": [
+      1.4656996662290684,
+      2.4002338505071443
+    ],
+    "share_heatmap_bigger": 0.7863247863247863
+  }
+}

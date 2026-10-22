@@ -1,0 +1,7 @@
+{
+  "model": "finetuned",
+  "temperature": 1.639854528679157,
+  "review_from": 0.03750349222585437,
+  "reject_from": 0.23897556715327462,
+  "ood_distance": 0.5002233028411867
+}

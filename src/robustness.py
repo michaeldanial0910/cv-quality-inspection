@@ -5,11 +5,13 @@ quality) at increasing severity and re-scored. The decision threshold is the one
 validation, so the numbers show what would happen on a line where conditions drift and nobody
 recalibrates. Also measures CPU latency and model size.
 
-    python -m src.robustness
+    python -m src.robustness                       # everything
+    python -m src.robustness brightness contrast   # only these (merged into reports/robustness.csv)
 """
 import io
 import json
 import os
+import sys
 import time
 
 import numpy as np
@@ -69,6 +71,7 @@ def main():
         lg, _ = ins.predict_batch(images)
         return ins.prob(lg)
 
+    only = sys.argv[1:]
     rows = []
     clean = score(imgs)
     base = at_threshold(y, clean, thr)
@@ -76,6 +79,8 @@ def main():
                  "defect_recall": base["defect_recall"], "missed_defects": base["missed_defects"],
                  "false_reject_rate": base["false_reject_rate"]})
     for name, levels in PERTURB.items():
+        if only and not any(name.startswith(o) for o in only):
+            continue
         for sev, fn in levels:
             p = score([fn(im, rng) for im in imgs])
             r = at_threshold(y, p, thr)
@@ -83,7 +88,15 @@ def main():
                          "defect_recall": r["defect_recall"], "missed_defects": r["missed_defects"],
                          "false_reject_rate": r["false_reject_rate"]})
             print(rows[-1])
-    pd.DataFrame(rows).to_csv(REPORTS / "robustness.csv", index=False)
+    out = pd.DataFrame(rows)
+    path = REPORTS / "robustness.csv"
+    if only and path.exists():                       # merge a partial run into earlier results
+        old = pd.read_csv(path)
+        old = old[~old["perturbation"].isin(out["perturbation"])]
+        out = pd.concat([old, out]).drop_duplicates(["perturbation", "severity"], keep="last")
+    out.to_csv(path, index=False)
+    if only:
+        return
 
     one = imgs[0]
     for _ in range(3):
