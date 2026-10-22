@@ -1,0 +1,31 @@
+# Environments & secrets
+.venv/
+.env
+kaggle.json
+*.pem
+
+# Data & models (large / third-party: download steps are in the README)
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+models/*
+!models/policy.json
+!models/.gitkeep
+
+# Python / notebooks
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+
+# Demo build intermediates (raw screen capture and generated cards; the final mp4 is committed)
+demo/raw.mp4
+demo/*.png
+
+# Session file transfers and scratch images
+.sync/
+reports/_*.png
+# Colab download (unzip it, then it can go)
+cv_outputs.zip

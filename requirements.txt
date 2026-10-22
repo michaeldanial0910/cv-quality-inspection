@@ -1,0 +1,22 @@
+# Direct dependencies (Python 3.12). Same pins as the churn/fraud/sentiment/recommender projects where shared.
+# Training of models B and C runs on Colab (notebooks/02_train_colab.ipynb); nothing here needs torch.
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+scikit-image
+scipy
+matplotlib==3.11.2
+pillow
+joblib==1.6.0
+onnx
+onnxruntime
+altair
+streamlit==1.64.0
+fastapi
+uvicorn
+python-multipart
+httpx
+jupyter==1.1.1
+ipykernel==7.4.0
+nbformat
+pytest==9.1.1

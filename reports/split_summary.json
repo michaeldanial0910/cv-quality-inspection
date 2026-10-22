@@ -1,0 +1,18 @@
+{
+  "manifest_sha256": "8c5f47328694a174619c9b6a454b9ab22c8a37be93a7ef3cfa94164b9c9e9bbd",
+  "counts": {
+    "train": 910,
+    "val": 195,
+    "test": 195
+  },
+  "defect_rate": {
+    "train": 0.6011,
+    "val": 0.6,
+    "test": 0.6
+  },
+  "groups": {
+    "train": 689,
+    "val": 155,
+    "test": 149
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "method": "rotation/flip-invariant polar correlation, threshold 0.97",
+  "originals": 1300,
+  "originals_nn_similarity_hist": {
+    "-1.00-0.50": 0,
+    "0.50-0.70": 0,
+    "0.70-0.80": 31,
+    "0.80-0.88": 121,
+    "0.88-0.92": 184,
+    "0.92-0.95": 272,
+    "0.95-0.97": 194,
+    "0.97-0.99": 344,
+    "0.99-1.01": 154
+  },
+  "originals_duplicate_pairs": 364,
+  "originals_groups": 993,
+  "originals_with_a_near_copy": 498,
+  "largest_group": 8,
+  "groups_with_both_labels": 0,
+  "kaggle300_test_images": 715,
+  "kaggle300_test_exact_file_copy_in_train": 64,
+  "kaggle300_test_with_near_copy_in_train": 707,
+  "kaggle300_test_nn_train_similarity_hist": {
+    "-1.00-0.50": 0,
+    "0.50-0.70": 3,
+    "0.70-0.80": 3,
+    "0.80-0.88": 2,
+    "0.88-0.92": 0,
+    "0.92-0.95": 0,
+    "0.95-0.97": 0,
+    "0.97-0.99": 11,
+    "0.99-1.01": 696
+  },
+  "kaggle300_example_pair": [
+    {
+      "path": "casting_data/casting_data/test/ok_front/cast_ok_0_1173.jpeg",
+      "nn_train_path": "casting_data/casting_data/train/ok_front/cast_ok_0_1173.jpeg",
+      "nn_train_sim": 1.0
+    }
+  ]
+}
