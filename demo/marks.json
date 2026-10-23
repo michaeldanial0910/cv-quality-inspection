@@ -1,0 +1,54 @@
+[
+ {
+  "name": "ready",
+  "t": 7.61
+ },
+ {
+  "name": "inspect_start",
+  "t": 7.61
+ },
+ {
+  "name": "inspect_pass",
+  "t": 11.88
+ },
+ {
+  "name": "inspect_border",
+  "t": 14.43
+ },
+ {
+  "name": "inspect_end",
+  "t": 19.7
+ },
+ {
+  "name": "results_start",
+  "t": 24.0
+ },
+ {
+  "name": "results_end",
+  "t": 33.32
+ },
+ {
+  "name": "review_start",
+  "t": 36.52
+ },
+ {
+  "name": "review_end",
+  "t": 41.05
+ },
+ {
+  "name": "limits_start",
+  "t": 44.05
+ },
+ {
+  "name": "limits_end",
+  "t": 47.46
+ },
+ {
+  "name": "data_start",
+  "t": 50.15
+ },
+ {
+  "name": "data_end",
+  "t": 53.33
+ }
+]
