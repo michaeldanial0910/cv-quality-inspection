@@ -1,15 +1,15 @@
 path,label,split,logit,score,prob,zone,error,tag
-casting_512x512/casting_512x512/ok_front/cast_ok_0_8776.jpeg,0,test,-5.20687,0.0054489416,0.0401096394838842,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_6258.jpeg,0,test,-5.1406875,0.0058195987,0.0416926532410519,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_5472.jpeg,0,test,-5.016082,0.006586782,0.0448365889890129,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_5852.jpeg,0,test,-4.6607985,0.009370273,0.0550857867808903,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_2622.jpeg,0,test,-4.5258718,0.010709343,0.0595286913687699,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_583.jpeg,0,test,-4.1908574,0.014907702,0.0720493305178013,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_7076.jpeg,0,test,-3.863236,0.02056801,0.0866026427843528,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_2785.jpeg,0,test,-3.8437836,0.020963551,0.0875455926266869,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_2394.jpeg,0,test,-3.5198183,0.028753571,0.1046661351873319,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_1429.jpeg,0,test,-3.4427176,0.030986778,0.1091547364637738,human review,sent to review,
-casting_512x512/casting_512x512/ok_front/cast_ok_0_6418.jpeg,0,test,-3.3327243,0.03446546,0.1158501275740318,human review,sent to review,
-casting_512x512/casting_512x512/def_front/cast_def_0_7336.jpeg,1,test,-2.988194,0.047962084,0.1391663682366949,human review,sent to review,
-casting_512x512/casting_512x512/def_front/cast_def_0_9737.jpeg,1,test,-2.8880339,0.05274827,0.1466460562830265,human review,sent to review,
-casting_512x512/casting_512x512/def_front/cast_def_0_6011.jpeg,1,test,-2.8110728,0.056728743,0.152617055128088,human review,sent to review,
+casting_512x512/casting_512x512/ok_front/cast_ok_0_8776.jpeg,0,test,-5.20687,0.0054489416,0.0401096394838842,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_6258.jpeg,0,test,-5.1406875,0.0058195987,0.0416926532410519,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_5472.jpeg,0,test,-5.016082,0.006586782,0.0448365889890129,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_5852.jpeg,0,test,-4.6607985,0.009370273,0.0550857867808903,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_2622.jpeg,0,test,-4.5258718,0.010709343,0.0595286913687699,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_583.jpeg,0,test,-4.1908574,0.014907702,0.0720493305178013,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_7076.jpeg,0,test,-3.863236,0.02056801,0.0866026427843528,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_2785.jpeg,0,test,-3.8437836,0.020963551,0.0875455926266869,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_2394.jpeg,0,test,-3.5198183,0.028753571,0.1046661351873319,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_1429.jpeg,0,test,-3.4427176,0.030986778,0.1091547364637738,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/ok_front/cast_ok_0_6418.jpeg,0,test,-3.3327243,0.03446546,0.1158501275740318,human review,sent to review,machining marks / surface texture on rim; no visible defect
+casting_512x512/casting_512x512/def_front/cast_def_0_7336.jpeg,1,test,-2.988194,0.047962084,0.1391663682366949,human review,sent to review,tiny pinhole/dent on outer rim; very bright background (lighting variant)
+casting_512x512/casting_512x512/def_front/cast_def_0_9737.jpeg,1,test,-2.8880339,0.05274827,0.1466460562830265,human review,sent to review,tiny pinhole/dent on outer rim; very bright background (lighting variant)
+casting_512x512/casting_512x512/def_front/cast_def_0_6011.jpeg,1,test,-2.8110728,0.056728743,0.152617055128088,human review,sent to review,tiny pinhole/dent on outer rim; very bright background (lighting variant)

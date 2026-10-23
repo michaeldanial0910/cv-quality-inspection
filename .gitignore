@@ -11,6 +11,9 @@ data/processed/*
 models/*
 !models/policy.json
 !models/colab_meta.json
+!models/model.onnx
+!models/head.npz
+!models/ood_ref.npz
 !models/.gitkeep
 
 # Python / notebooks
@@ -30,3 +33,6 @@ demo/*.png
 reports/_*.png
 # Colab download (unzip it, then it can go)
 cv_outputs.zip
+# Personal study notes (not part of the submission)
+PROJECT_GUIDE.md
+SESSION1_PROGRESS.md
